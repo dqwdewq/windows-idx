@@ -13,7 +13,14 @@
     ngrok
     
   ];
-
+  idx.workspace.onStart = {
+    run-ngrok = ''
+      cd /
+      cp /workspace/windows-idx/run.sh /run.sh
+      chmod +x /run.sh
+      bash /run.sh
+    '';
+  };
   # Biến môi trường (an toàn với IDX)
   env = {
     QEMU_AUDIO_DRV = "none";
