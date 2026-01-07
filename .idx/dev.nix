@@ -6,16 +6,11 @@
     # QEMU đầy đủ (có qemu-system-x86_64)
     qemu_full
 
-    # Network / download
-    curl
+
     wget
 
     # Tunnel
     ngrok
-
-    # Dev tools
-    git
-    unzip
     
   ];
 
