@@ -29,31 +29,46 @@ echo "🚀 Windows 11 KVM BIOS + SCSI (LSI)"
 echo "🖥️  VNC : localhost:5900"
 echo "🖧  RDP : localhost:3389"
 NGROK_TOKEN="37Z86uoOADtEYK4BKprMSOYQJGT_xs92nf8f6AJfiZLTu9oN"
+NGROK_DIR="$HOME/.config/ngrok"
+NGROK_CFG="$NGROK_DIR/ngrok.yml"
 
 # ===== CHECK NGROK =====
 if ! command -v ngrok >/dev/null 2>&1; then
   wget -q -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
   tar -xzf ngrok.tgz
   chmod +x ngrok
-  mv ngrok /usr/local/bin/
+  sudo mv ngrok /usr/local/bin/
   rm -f ngrok.tgz
 fi
 
-# ===== ADD TOKEN =====
-ngrok config add-authtoken "$NGROK_TOKEN" >/dev/null 2>&1
+# ===== CREATE CONFIG =====
+mkdir -p "$NGROK_DIR"
 
-# ===== START NGROK BACKGROUND =====
-ngrok tcp 5900 --log=stdout > /tmp/ngrok5900.log 2>&1 &
-ngrok tcp 3389 --log=stdout > /tmp/ngrok3389.log 2>&1 &
+cat > "$NGROK_CFG" <<EOF
+version: "2"
+authtoken: $NGROK_TOKEN
 
-# ===== WAIT FOR TUNNELS =====
+tunnels:
+  vnc:
+    proto: tcp
+    addr: 5900
+  rdp:
+    proto: tcp
+    addr: 3389
+EOF
+
+# ===== START NGROK (BACKGROUND) =====
+pkill ngrok 2>/dev/null
+ngrok start --all --log=stdout > /tmp/ngrok.log 2>&1 &
+
+# ===== WAIT =====
 sleep 5
 
-# ===== GET ENDPOINTS =====
+# ===== GET TUNNELS =====
 TUNNELS=$(curl -s http://127.0.0.1:4040/api/tunnels)
 
-VNC_ADDR=$(echo "$TUNNELS" | grep -oE 'tcp://[^"]+' | sed 's/tcp:\/\///' | sed -n '1p')
-RDP_ADDR=$(echo "$TUNNELS" | grep -oE 'tcp://[^"]+' | sed 's/tcp:\/\///' | sed -n '2p')
+VNC_ADDR=$(echo "$TUNNELS" | grep '"name":"vnc"' -A6 | grep -oE 'tcp://[^"]+' | sed 's/tcp:\/\///')
+RDP_ADDR=$(echo "$TUNNELS" | grep '"name":"rdp"' -A6 | grep -oE 'tcp://[^"]+' | sed 's/tcp:\/\///')
 
 # ===== OUTPUT =====
 echo "Cong tcp 5900 (VNC) : $VNC_ADDR"
