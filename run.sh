@@ -18,7 +18,7 @@ FLAG_FILE="installed.flag"
 WORKDIR="$HOME/windows-idx"
 
 ### NGROK ###
-NGROK_TOKEN="39lNuj7npoIszH4QtGTVRdUpOBU_5nSojVFfwWZA5WXeQ7xFm"
+NGROK_TOKEN="39lNf588Sj5FCP2Cqar5IaaXKfs_3JzSfPHkuXX5bqnbpuHvc"
 NGROK_DIR="$HOME/.ngrok"
 NGROK_BIN="$NGROK_DIR/ngrok"
 NGROK_CFG="$NGROK_DIR/ngrok.yml"
