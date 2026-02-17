@@ -2,7 +2,7 @@
 set -e
 
 ### CONFIG ###
-ISO_URL="https://archive.org/download/windows-10-pro-x-64-usb_202510/Windows%2010%20PRO%20x64.iso"
+ISO_URL="https://download2327.mediafire.com/wfhim2c927ngOYocv_K2HHqCII79jryqBjgyLQjnFUABiA1voWvPE6zBxRNHs5eogtwCi0CrMdLHoa2vw6CXNtg0Xrc5LYUqGLamGCKk0HQfxHQ4fKhy0JXKvufC_DdjMC4T64A1K3a3fR0ytkbDoHK-SYGHNZ3EdjJzUwTpM81UFA/zkeljisztrpnt4s/Windows+10+PRO+x64.iso"
 ISO_FILE="win11-gamer.iso"
 
 DISK_FILE="/var/win11.qcow2"
