@@ -8,7 +8,7 @@ ISO_FILE="win11-gamer.iso"
 DISK_FILE="/var/win11.qcow2"
 DISK_SIZE="320G"
 
-RAM="32"
+RAM="32G"
 CORES="8"
 
 VNC_DISPLAY=":0"
