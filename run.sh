@@ -6,10 +6,10 @@ ISO_URL="https://rsload.website/win/Windows.11.24H2.26100.7623.SelectOS.Rus.2026
 ISO_FILE="win11-gamer.iso"
 
 DISK_FILE="/var/win11.qcow2"
-DISK_SIZE="60G"
+DISK_SIZE="320G"
 
-RAM="8"
-CORES="4"
+RAM="32"
+CORES="8"
 
 VNC_DISPLAY=":0"
 RDP_PORT="3389"
