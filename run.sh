@@ -2,7 +2,7 @@
 set -e
 
 ### CONFIG ###
-ISO_URL="https://archive.org/download/windows-11-consumer-24-h-2-26100.2314-2/Windows%2011%20Consumer%2024H2%2026100.2314%20-%202%20.iso"
+ISO_URL="https://rsload.website/win/Rus_Windows_11_26H1_UltraGames_28000.1575.iso"
 ISO_FILE="win11-gamer.iso"
 
 DISK_FILE="/var/win11.qcow2"
