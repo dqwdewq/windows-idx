@@ -2,14 +2,14 @@
 set -e
 
 ### CONFIG ###
-ISO_URL="https://go.microsoft.com/fwlink/p/?LinkID=2195280&clcid=0x409&culture=en-us&country=US"
+ISO_URL="https://archive.org/download/windows-11-consumer-24-h-2-26100.2314-2/Windows%2011%20Consumer%2024H2%2026100.2314%20-%202%20.iso"
 ISO_FILE="win11-gamer.iso"
 
 DISK_FILE="/var/win11.qcow2"
-DISK_SIZE="64G"
+DISK_SIZE="120G"
 
-RAM="8G"
-CORES="4"
+RAM="16G"
+CORES="8"
 
 VNC_DISPLAY=":0"
 RDP_PORT="3389"
