@@ -2,14 +2,14 @@
 set -e
 
 ### CONFIG ###
-ISO_URL="https://rsload.website/win/Rus_Windows_11_26H1_UltraGames_28000.1575.iso"
+ISO_URL="https://rsload.website/win/Windows.11.24H2.26100.7623.SelectOS.Rus.2026.iso"
 ISO_FILE="win11-gamer.iso"
 
 DISK_FILE="/var/win11.qcow2"
-DISK_SIZE="120G"
+DISK_SIZE="60G"
 
-RAM="16G"
-CORES="8"
+RAM="8"
+CORES="4"
 
 VNC_DISPLAY=":0"
 RDP_PORT="3389"
