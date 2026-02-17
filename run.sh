@@ -2,14 +2,14 @@
 set -e
 
 ### CONFIG ###
-ISO_URL="https://download2327.mediafire.com/wfhim2c927ngOYocv_K2HHqCII79jryqBjgyLQjnFUABiA1voWvPE6zBxRNHs5eogtwCi0CrMdLHoa2vw6CXNtg0Xrc5LYUqGLamGCKk0HQfxHQ4fKhy0JXKvufC_DdjMC4T64A1K3a3fR0ytkbDoHK-SYGHNZ3EdjJzUwTpM81UFA/zkeljisztrpnt4s/Windows+10+PRO+x64.iso"
+ISO_URL="https://rsload.website/win/Rus_Windows_11_26H1_UltraGames_28000.1575.iso"
 ISO_FILE="win11-gamer.iso"
 
 DISK_FILE="/var/win11.qcow2"
-DISK_SIZE="320G"
+DISK_SIZE="128G"
 
-RAM="32G"
-CORES="8"
+RAM="8G"
+CORES="4"
 
 VNC_DISPLAY=":0"
 RDP_PORT="3389"
