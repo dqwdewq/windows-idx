@@ -2,7 +2,7 @@
 set -e
 
 ### CONFIG ###
-ISO_URL="https://rsload.website/win/Windows.11.26100.4946.x64.Rus.08.2025.Opti-Fix.iso"
+ISO_URL="https://archive.org/download/windows-10-pro-x-64-usb_202510/Windows%2010%20PRO%20x64.iso"
 ISO_FILE="win11-gamer.iso"
 
 DISK_FILE="/var/win11.qcow2"
