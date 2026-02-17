@@ -2,7 +2,7 @@
 set -e
 
 ### CONFIG ###
-ISO_URL="https://rsload.website/win/Windows.11.24H2.26100.7623.SelectOS.Rus.2026.iso"
+ISO_URL="https://rsload.website/win/Windows.11.26100.4946.x64.Rus.08.2025.Opti-Fix.iso"
 ISO_FILE="win11-gamer.iso"
 
 DISK_FILE="/var/win11.qcow2"
